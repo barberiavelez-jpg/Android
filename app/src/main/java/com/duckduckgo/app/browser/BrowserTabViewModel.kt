@@ -4474,7 +4474,11 @@ class BrowserTabViewModel @Inject constructor(
 
         when {
             duckAiFeatureState.showContextualMode.value && !isNtp -> {
-                command.value = Command.ShowDuckAIContextualMode
+                val contextualUrl = url
+                val contextualTitle = title
+                if (contextualUrl != null && contextualTitle != null) {
+                    command.value = Command.ShowDuckAIContextualMode(contextualUrl, contextualTitle)
+                }
             }
 
             duckAiFeatureState.showFullScreenMode.value -> {
