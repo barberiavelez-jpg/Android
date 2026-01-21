@@ -158,4 +158,11 @@ interface DuckChatFeature {
      */
     @Toggle.DefaultValue(DefaultFeatureValue.TRUE)
     fun supportsSyncChatsDeletion(): Toggle
+
+    /**
+     * @return `true` when the sync status subscription feature is enabled
+     * If the remote feature is not present defaults to `true`
+     */
+    @Toggle.DefaultValue(DefaultFeatureValue.TRUE)
+    fun supportsSyncStatusSubscription(): Toggle
 }

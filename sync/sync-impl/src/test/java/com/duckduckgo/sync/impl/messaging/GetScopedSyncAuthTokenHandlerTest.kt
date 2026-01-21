@@ -204,7 +204,7 @@ class GetScopedSyncAuthTokenHandlerTest {
     }
 
     private fun configureSignedIn() {
-        whenever(mockDeviceSyncState.getAccountState()).thenReturn(DeviceSyncState.SyncAccountState.SignedIn(emptyList()))
+        whenever(mockDeviceSyncState.getAccountState()).thenReturn(DeviceSyncState.SyncAccountState.SignedIn("userId", emptyList()))
     }
 
     private fun verifyNoResponse() {
