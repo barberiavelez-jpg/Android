@@ -1,20 +1,26 @@
-form api
-import os
-import asyncio
-import logging
-import pandas as pd
-import pandas_ta as ta
-import ccxt.pro as ccxt
-from datetime import datetime
-from dotenv import load_dotenv
-from telegram import Update
-from telegram.ext import Application, CommandHandler, ContextTypes
+form/usuario/iqoption/import/api
+import/time
+
+while/true:
+   if not api.check_connect0():
+        print('error de conexión')
+        api.connect()
+      else:
+print(conectado a iqoption')
+api.change_balance(practice')#practice demo o real
+time.sleep(1)
+
+entrada=1
+par='eur usd otc'
+dirección='put'
+tiempo.sleep 1
+api.buy(entrada.par.direccion.tienpo)
 
 # Cargar variables de entorno
 load_dotenv()
-TOKEN = os.getenv("TELEGRAM_TOKEN")
+TOKEN = os.getenv("TELEGRAM_TOKEN")8313904219:AAGrk7sDzZewAd43MJMoGHbDRB06qGzDoDs/start
 # Configura los pares que quieres vigilar
-SYMBOLS = ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'BNB/USDT']
+SYMBOLS = ['eur/chf otc', '/USD/cad/otc', 'eur/jpy/otc', 'eur/usd/otc']
 TIMEFRAME = '1h'
 
 # Configuración de Logs
