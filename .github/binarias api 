@@ -1,0 +1,71 @@
+form Telegram Bot API token exposed
+
+START_HOUR = 6   # 6 AM
+END_HOUR = 21    # 9 PM
+
+def is_trading_time():
+    now = datetime.now()
+        return START_HOUR <= now.hour < END_HOUR
+        SYMBOLS = {
+                "EURUSD_OTC": "EURUSD=OTC,
+                    "EURJPY_OTC": "EURJPY=OTC
+        }
+        # =========================
+        # CONFIGURACIÓN SEÑALES de Trading 
+        # =========================
+        TELEGRAM_TOKEN =8313904219:AAGrk7sDzZewAd43MJMoGHbDRB06qGzDoDs "TU_TOKEN_TELEGRAM"
+        CHAT_ID =  "TU_CHAT_ID"http://t.me/Henbot4_bot
+
+        SYMBOLS = {
+                "EURUSD OTC": "EURUSD=X",
+                    "EURJPY OTC": "EURJPY=X"
+        }
+
+        INTERVAL = "15m"
+        CANDLES = 300
+
+        ATR_PERIOD = 10
+        SUPERTREND_FACTOR = 3.0
+        EMA_PERIOD = 200
+        RSI_PERIOD = 14
+
+        CHECK_TIME = 900  # 15 min
+
+        START_HOUR = 6   # 6 AM
+        END_HOUR = 21    # 9 PM
+
+        # =========================
+        # UTILIDADES
+        # =========================
+        def is_trading_time():
+            now = datetime.now()
+                return START_HOUR <= now.hour < END_HOUR
+
+                def send_telegram_message(message):
+                    url = f"https://api.telegram.org/bot{ 
+                        TELEGRAM_TOKEN}/sendMessage HOLA SEÑALES  DE TRADING 
+                            requests.post(url, json={
+                                        "chat_id": CHAT_ID,
+                                                "text": message,
+                                                        "parse_mode": "Markdown"
+                            })
+
+                            # =========================
+                            # DATOS DE MERCADO
+                            # =========================
+                            def get_market_data(symbol):
+                                df = yf.download(symbol, period="5d", interval=INTERVAL)
+                                    df.dropna(inplace=True)
+                                        return df
+
+                                        # =========================
+                                        # ESTRATEGIA
+                                        # =========================
+                                        def check_signal(df):
+                                            st = ta.supertrend(
+                                                        high=df["High"],
+                                                                low=df["Low"],
+                                                                        close=df["Close"],
+                                                                                length=ATR_PERIOD,
+                                                                                        
+        }
